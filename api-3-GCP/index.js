@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 
 app.get('/', function(req, res) {
-    res.status(200).send('API 2 is up and running!');
+    res.status(200).send('API3-GCP is up and running!');
 });
 
 app.get('/health', function(req, res) {
@@ -10,5 +10,5 @@ app.get('/health', function(req, res) {
 });
 
 app.listen(5000, function() {
-    console.log('API 2 is running...');
+    console.log('API3-GCP is running...');
 });
