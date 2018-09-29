@@ -5,11 +5,11 @@ const config = require('./config/config.json');
 const fs = require('fs');
 
 app.get('/', function(req, response) {
-    request(config.api2_url, { json: true }, (err, res, body) => {
+    request(config.api3_gcp_url, { json: true }, (err, res, body) => {
         if (err) {
-            response.send('API 1 is running fine. But I was not able to reach API 2 due to ' + err);
+            response.send('API1-AWS is running fine. But I was not able to reach API3-GCP due to ' + err);
         } else {
-            response.send('API 1 is running fine and managed to reach out to API 2. Well done!');
+            response.send('API1-AWS is running fine and managed to reach out to API3-GCP. Well done!');
         }
     });
 });
@@ -33,5 +33,5 @@ app.get('/config-log', function(req, res) {
 });
 
 app.listen(3000, function() {
-    console.log('API 1 is running...');
+    console.log('API1-AWS is running...');
 });
