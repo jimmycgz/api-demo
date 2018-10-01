@@ -7,9 +7,9 @@ const fs = require('fs');
 app.get('/', function(req, response) {
     request(config.api3_gcp_url, { json: true }, (err, res, body) => {
         if (err) {
-            response.send('API1-AWS is running fine. But I was not able to reach API3-GCP due to ' + err);
+            response.send('API-AWS-001 is running fine. But I was not able to reach API3-GCP due to ' + err);
         } else {
-            response.send('API1-AWS is running fine and managed to reach out to API3-GCP. Well done!');
+            response.send('API-AWS-001 is running fine and managed to reach out to API3-GCP. Well done!');
         }
     });
 });
@@ -33,5 +33,5 @@ app.get('/config-log', function(req, res) {
 });
 
 app.listen(3000, function() {
-    console.log('API1-AWS is running...');
+    console.log('API-AWS-001 is running...');
 });
